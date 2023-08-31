@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <!-- Css File -->
+    <link rel="stylesheet" href="quote.css">
+</head>
+<body>
+    <!-- Heading -->
+    <header>
+        <h1>Quote of the Day</h1>
+    </header>
+    <main>
+        <!-- Quote Space -->
+        <div class="container">
+            <div class="quote-space">
+
+                <p class="quote">
+                     Every great quoter was once a listener, absorbing wisdom before sharing it with the world.
+                </p>
+                
+            </div>
+            <!-- Quote given by -->
+            <div class="quoter">
+                <span>--</span>
+                <span>ChatGPT</span>
+            </div>
+            <!-- Different features -->
+            <div class="features">
+                <img class="copy-button feature-button" data-copy-target=".quoter" src="/copy.png" alt="">
+                <img class="feature-icon" src="/speaker-filled-audio-tool.png" data-action="speak" alt="">
+                <button class="new-quote-button feature-button">New Quote</button>
+            </div>
+        </div>
+    </main>
+    <!-- JavaScript File -->
+    <script src="/quote.js"></script>
+</body>
+</html>

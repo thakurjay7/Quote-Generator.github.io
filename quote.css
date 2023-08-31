@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: aquamarine;
+}
+h1{
+    text-align: center;
+    color: #fff;
+    margin: 100px 0px 25px;
+    font-size: 40px;
+}
+/* Main Container */
+.container{
+    width: 600px;
+    min-height: 10vh;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 15px 10px 20px rgba(156, 156, 156, 0.366);;
+    margin: auto;
+    padding: 30px;
+}
+
+/* Quote Area */
+.quote-space {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+}
+
+.quote {
+    font-size: 25px;
+    word-break: break-all;
+    text-align: center;
+    position: relative; /* Add relative positioning */
+}
+
+/* Add left and right quotes using pseudo-elements */
+.quote::before,
+.quote::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.quote::before {
+    background-image: url("/left-quote.png");
+    margin-right: 5px; /* Add spacing between left quote and text */
+}
+
+.quote::after {
+    background-image: url("/right-quote-sign.png");
+    margin-left: 5px; /* Add spacing between text and right quote */
+}
+
+/* Quoter style */
+.quoter{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 17px;
+    font-style: italic;
+    margin: 15px 20px 0px 0px;
+    border-bottom: 1px rgba(0, 0, 0, 0.232) solid;
+
+    
+}
+.quoter span:first-child{
+    margin: -1px 5px 40px 0px;
+
+}
+
+/* Quote features */
+/* Quote features */
+.features {
+    display: flex;
+    justify-content: space-between; /* Distribute items to both ends */
+    align-items: center; /* Center align vertically */
+    margin-top: 20px;
+}
+
+.features img {
+    cursor: pointer;
+    width: 50px;
+    border: 1px aquamarine solid;
+    padding: 10px;
+    border-radius: 50px;
+    margin-right: 20px;
+
+}
+
+.features img:hover {
+    background-color: aquamarine;
+    transition: 0.5s ease;
+}
+.features button:hover{
+    background-color: rgb(23, 235, 165);
+    transition: 0.5s ease;
+}
+.features button {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: aquamarine;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    margin-left: auto; /* Move the button to the right */
+}
+/* Apply transition on :active state for buttons and image icons */
+.features button:active,
+.features img:active {
+    transform: scale(0.95);
+}
+.quote:active,
+.quoter:active {
+    transform: scale(0.95);
+}
+
+/* Your existing CSS rules */
+
+/* Rest of your existing CSS */
+
+/* Apply transition on :active state for buttons and image icons */
+.features button:active,
+.features img:active,
+.quote:active,
+.quoter:active {
+    transform: scale(0.95);
+}
+
+/* Media Query for screens up to 600px wide (typical mobile screens) */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+        margin: 40px 0px 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .quote {
+        font-size: 18px;
+    }
+
+    .quoter {
+        font-size: 12px;
+    }
+
+    .features img,
+    .features button {
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+    }
+
+    .features button {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+}
+/* Media Query for screens with a width of 360px and a height of 800px */
+@media screen and (max-width: 360px) and (max-height: 800px) {
+    h1 {
+        font-size: 24px;
+        margin: 30px 0px 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .quote {
+        font-size: 16px;
+    }
+
+    .quoter {
+        font-size: 11px;
+    }
+
+    .features img,
+    .features button {
+        width: 24px;
+        height: 24px;
+        padding: 5px;
+    }
+
+    .features button {
+        width: 80px;
+        height: 24px;
+        font-size: 10px;
+    }
+}
